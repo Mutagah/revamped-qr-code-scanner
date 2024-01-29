@@ -1,38 +1,103 @@
-.App {
+.main-scan-container {
+  border: 5px solid #f37e19;
+  border-radius: 10px;
+  margin: 40px  auto;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.881);
+  width: 75%;
+}
+
+.scanner-title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scanner-subcontainer {
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.scan-generator {
+  text-align: center;
+  border-right: 3px dotted #f37e19;
+  margin: 20px;
+  padding: 30px;
+}
+.scan-generator,
+.cam-scanner {
+  h5,
+  form {
+    text-align: center;
+  }
+}
+.generator-form > input {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 30px;
+  text-align: center;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #f37e19;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.qr-code-container {
+  text-align: center;
+}
+
+.cam-scanner {
+  text-align: center;
+  padding: 20px;
+}
+
+.scanner-container {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.scan-section {
+  border: 2px solid #f37e19;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.881);
+  width: 500px;
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#scanner-box {
+  border-radius: 20px;
+}
+
+button {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #f37e19;
+}
+
+.after-scan {
+  text-align: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.after-scan-button {
+  margin: 10px;
+}
+
+table, th, td{
+  border: 2px solid black;
 }
