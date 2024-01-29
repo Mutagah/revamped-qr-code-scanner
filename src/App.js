@@ -9,7 +9,6 @@ function App() {
   const [scanData, setScanData] = useState(null);
   const [fetchedData, setFetchedData] = useState([]);
 
-  
   useEffect(() => {
     if (!qrCodeScanner) {
       qrCodeScanner = new Html5QrcodeScanner("scanner-box", {
@@ -23,24 +22,6 @@ function App() {
       async function successScan(result) {
         qrCodeScanner.clear();
         setScanData(result);
-
-        // setScanData(() => result);
-        // qrCodeScanner.stop();
-        // try {
-        //   const fetchResponse = await fetch("http://localhost:3000/scanned_data", {
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({ scanData: scanData }),
-        //   });
-        //   const data = await fetchResponse.json();
-        //   return data;
-        // } catch (e) {
-        //   return e;
-        // }
-
-        // Fetch the data from backend and display in the scanner-box i.e every scanned data
       }
 
       function failedScan(error) {
@@ -48,12 +29,30 @@ function App() {
       }
       qrCodeScanner.render(successScan, failedScan);
     }
-    // After a successful post how i am to fetch my data
-    
+  }, []);
+
+  useEffect(() => {
+    async function handleScanDataSubmission() {
+      try {
+        const dataSent = await fetch("http://localhost:3000/scanned_data", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ scanData: scanData }),
+        });
+        const response = await dataSent.json();
+        return response;
+      } catch (e) {
+        return e;
+      }
+    }
+    // Fetch the data from backend and display in the scanner-box i.e every scanned data 
+
     // fetch("http://localhost:3000/scanned_data")
     //   .then((res) => res.json())
     //   .then((data) => setFetchedData(data));
-  }, []);
+  }, scanData);
 
   async function generateQrCode(e) {
     e.preventDefault();
@@ -98,7 +97,7 @@ function App() {
         <div className="cam-scanner">
           <h5>Qr Code Scan by Web Cam</h5>
           <div className="scan-section">
-            {scanData === "hello"? (
+            {scanData === "hello" ? (
               <div className="after-scan">
                 <table style={{ width: "100%" }}>
                   <tr>
