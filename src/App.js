@@ -6,12 +6,12 @@ function App() {
   let qrCodeScanner;
   const [text, setText] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  // const [scanData, setScanData] = useState(null);
-  const [scanData, setScanData] = useState("hello");
+  const [scanData, setScanData] = useState(null);
   const [fetchedData, setFetchedData] = useState([]);
 
+  
   useEffect(() => {
-    if (!qrCodeScanner && scanData === null) {
+    if (!qrCodeScanner) {
       qrCodeScanner = new Html5QrcodeScanner("scanner-box", {
         qrbox: {
           width: 250,
@@ -21,26 +21,24 @@ function App() {
       });
 
       async function successScan(result) {
-        setScanData(() => result);
-        console.log(result);
+        qrCodeScanner.clear();
+        setScanData(result);
 
-        // post to the backend then get the data
-        try {
-          const fetchResponse = await fetch(
-            "http://localhost:3000/scanned_data",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ scanData: scanData }),
-            }
-          );
-          const data = await fetchResponse.json();
-          return data;
-        } catch (e) {
-          return e;
-        }
+        // setScanData(() => result);
+        // qrCodeScanner.stop();
+        // try {
+        //   const fetchResponse = await fetch("http://localhost:3000/scanned_data", {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({ scanData: scanData }),
+        //   });
+        //   const data = await fetchResponse.json();
+        //   return data;
+        // } catch (e) {
+        //   return e;
+        // }
 
         // Fetch the data from backend and display in the scanner-box i.e every scanned data
       }
@@ -50,10 +48,11 @@ function App() {
       }
       qrCodeScanner.render(successScan, failedScan);
     }
-
-    fetch("http://localhost:3000/scanned_data")
-      .then((res) => res.json())
-      .then((data) => setFetchedData(data));
+    // After a successful post how i am to fetch my data
+    
+    // fetch("http://localhost:3000/scanned_data")
+    //   .then((res) => res.json())
+    //   .then((data) => setFetchedData(data));
   }, []);
 
   async function generateQrCode(e) {
@@ -65,9 +64,6 @@ function App() {
       console.warn(error);
     }
   }
-
-  console.log(scanData);
-  console.log(fetchedData);
   return (
     <div className="main-scan-container">
       <h1 className="scanner-title"> Generate & Scan the Qr code</h1>
@@ -102,12 +98,14 @@ function App() {
         <div className="cam-scanner">
           <h5>Qr Code Scan by Web Cam</h5>
           <div className="scan-section">
-            {scanData ? (
+            {scanData === "hello"? (
               <div className="after-scan">
                 <table style={{ width: "100%" }}>
                   <tr>
                     <th>Scanned Data:</th>
-                    <td style={{fontStyle:"italic"}}>{fetchedData.scanData}</td>
+                    <td style={{ fontStyle: "italic" }}>
+                      {fetchedData.scanData}
+                    </td>
                   </tr>
                 </table>
               </div>
