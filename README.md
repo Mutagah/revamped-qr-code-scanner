@@ -5,11 +5,18 @@ Project Description:
 
 Project Setup Instructions:
 
-#####   1.  Clone the project to your local machine and on successful cloning, change the directory to the cloned folder `cd revamped-qr-code-scanner`.
+#####   1.  First, clone [Qr code scanner backend](https://github.com/Mutagah/qr-code-scanner-backend) and change the directory to the cloned folder using `cd qr-code-scanner-backend`
 
-#####   2.  The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
+#####   2.  `bundle install` inside the qr-code-scanner-backend to install then required gems.
 
-#####   3.  A successful page `localhost 5000` would be rendered and the site is now ready for interaction.
+#####   3. run `rails s` in the root folder of the project and url `http://127.0.0.1:3000` would show in terminal.
+
+#####   4. Clone [Qr code scanner frontend](https://github.com/Mutagah/revamped-qr-code-scanner) and change the directory to the cloned folder using `cd revamped-qr-code-scanner`.
+
+#####   5. run `npm start` in the root folder of the recently cloned project and a new tab in your browser with url `http://localhost:5000/` would appear.
+
+#####   6. The project is now ready for interaction.
+
 
 #### Copyright and License Information:
 
