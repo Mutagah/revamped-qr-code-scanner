@@ -5,17 +5,17 @@ Project Description:
 
 Project Setup Instructions:
 
-##### 1.  Clone the project to your local machine and on successful cloning, change the directory to the cloned folder `cd revamped-qr-code-scanner`.
+#####   1.  Clone the project to your local machine and on successful cloning, change the directory to the cloned folder `cd revamped-qr-code-scanner`.
 
-2.  ##### The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
+#####   2.  The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
 
-3.  ##### A successful page `localhost 5000` would be rendered
+#####   3.  A successful page `localhost 5000` would be rendered
 
-4.  #### The site is now ready for interaction.
+####    4.  The site is now ready for interaction.
 
 #### Copyright and License Information:
 
-                               Copyright (c) [2022] [Kihahu Mutaga]
+                               Copyright (c) [2024] [Kihahu Mutaga]
 
         Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
