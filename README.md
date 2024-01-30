@@ -9,9 +9,7 @@ Project Setup Instructions:
 
 #####   2.  The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
 
-#####   3.  A successful page `localhost 5000` would be rendered
-
-####    4.  The site is now ready for interaction.
+#####   3.  A successful page `localhost 5000` would be rendered and the site is now ready for interaction.
 
 #### Copyright and License Information:
 
