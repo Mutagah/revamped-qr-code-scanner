@@ -10,7 +10,6 @@
    ```bash 
         `revamped-qr-code-scanner`
     ```
-    ```
 
 2.  #### The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
 
