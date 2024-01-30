@@ -20,6 +20,7 @@ Project Setup Instructions
 
 #####   6. The project is now ready for interaction.
 
+#####   NB: Check [user md]() for usage a more detailed user manual.
 
 Copyright and License Information
 ---------------------------------
