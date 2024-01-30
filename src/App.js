@@ -1,7 +1,9 @@
-import "./App.css";
-import React, { useState, useEffect } from "react";
 import QRCode from "qrcode";
 import { Html5QrcodeScanner } from "html5-qrcode";
+import React, { useState, useEffect } from "react";
+
+import "./App.css";
+
 function App() {
   let qrCodeScanner;
   const [text, setText] = useState("");
@@ -31,27 +33,27 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    async function handleScanDataSubmission() {
-      try {
-        const dataSent = await fetch("http://localhost:3000/scanned_data", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ scanData: scanData }),
-        });
-        const response = await dataSent.json();
-        return response;
-      } catch (e) {
-        return e;
-      }
+  async function handleScanDataSubmission() {
+    try {
+      const dataSent = await fetch("http://localhost:3000/scanned_data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ scanData: scanData }),
+      });
+      const response = await dataSent.json();
+      const acquiredData = await fetch("http://localhost:3000/scanned_data");
+      const receivedData = await acquiredData
+        .json()
+        .then((data) => setFetchedData(data));
+      return receivedData;
+    } catch (e) {
+      return e;
     }
-    // Fetch the data from backend and display in the scanner-box i.e every scanned data 
-
-    // fetch("http://localhost:3000/scanned_data")
-    //   .then((res) => res.json())
-    //   .then((data) => setFetchedData(data));
+  }
+  useEffect(() => {
+    handleScanDataSubmission();
   }, scanData);
 
   async function generateQrCode(e) {
@@ -97,7 +99,7 @@ function App() {
         <div className="cam-scanner">
           <h5>Qr Code Scan by Web Cam</h5>
           <div className="scan-section">
-            {scanData === "hello" ? (
+            {scanData ? (
               <div className="after-scan">
                 <table style={{ width: "100%" }}>
                   <tr>
