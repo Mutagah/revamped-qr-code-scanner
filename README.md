@@ -1,9 +1,9 @@
-### Project Name : Qr Code Scanner
+Project Name : Qr Code Scanner
 
-### Written by : Kihahu Mutaga
+Written by : Kihahu Mutaga
 
-### Project Description :
-### Qr Code Scanner is a project that offers a user scanning ability to an existing qr code and renders the result on the screen. The application also has the ability to generate downloadable qr codes depending on what text the user offers.
+Project Description :
+Qr Code Scanner is a project that offers a user scanning ability to an existing qr code and renders the result on the screen. The application also has the ability to generate downloadable qr codes depending on what text the user offers.
 
 ### Project Setup Instructions:
 1.  Clone the project to your local machine and on successful cloning, change the directory to the cloned folder 
