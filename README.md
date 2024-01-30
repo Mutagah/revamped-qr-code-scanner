@@ -1,10 +1,12 @@
 Project Name: Qr Code Scanner
+------------------------------
 
 Project Description:
+--------------------
 ##### Qr Code Scanner is a project that offers a user scanning ability to an existing qr code and renders the result on the screen. The application also has the ability to generate downloadable qr codes depending on what text the user offers.
 
 Project Setup Instructions:
-
+---------------------------
 #####   1.  First, clone [Qr code scanner backend](https://github.com/Mutagah/qr-code-scanner-backend) and change the directory to the cloned folder using `cd qr-code-scanner-backend`
 
 #####   2.  `bundle install` inside the qr-code-scanner-backend to install then required gems.
