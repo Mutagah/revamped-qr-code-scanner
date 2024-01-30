@@ -11,7 +11,7 @@ Project Setup Instructions:
 
 #####   3.  A successful page `localhost 5000` would be rendered
 
-####    4.  The site is now ready for interaction.
+#####    4.  The site is now ready for interaction.
 
 #### Copyright and License Information:
 
