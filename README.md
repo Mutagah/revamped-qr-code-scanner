@@ -20,7 +20,7 @@ Project Setup Instructions
 
 #####   6. The project is now ready for interaction.
 
-#####   NB: Check [USER md]() for usage a more detailed user manual.
+#####   NB: Check [USAGE.md](https://github.com/Mutagah/revamped-qr-code-scanner/blob/main/USER.md) for a more detailed user manual.
 
 Copyright and License Information
 ---------------------------------
