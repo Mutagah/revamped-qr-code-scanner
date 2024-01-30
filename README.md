@@ -6,7 +6,11 @@
 ##### Qr Code Scanner is a project that offers a user scanning ability to an existing qr code and renders the result on the screen. The application also has the ability to generate downloadable qr codes depending on what text the user offers.
 
 ### Project Setup Instructions:
-1.  #### Clone the project to your local machine and on successful cloning, change the directory to the cloned folder `revamped-qr-code-scanner`
+1.  #### Clone the project to your local machine and on successful cloning, change the directory to the cloned folder 
+   ```bash 
+        `revamped-qr-code-scanner`
+    ```
+    ```
 
 2.  #### The web project is built on react framework hence `npm start` works. Do this at the root directory of your cloned project.
 
