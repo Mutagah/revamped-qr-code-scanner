@@ -9,4 +9,4 @@
 ![Screenshot 2024-01-30 235555](https://github.com/Mutagah/revamped-qr-code-scanner/assets/106149210/4617349c-de6d-410b-9f30-1d1a5ad913c3)
 
 #####  3.  The view after camera access is allowed and the camera awaits scanning.
-![Screenshot 2024-01-30 235632](https://github.com/Mutagah/revamped-qr-code-scanner/assets/106149210/55992dec-ab0b-4aca-8753-466638fceee0)
+![Screenshot 2024-01-31 114211](https://github.com/Mutagah/revamped-qr-code-scanner/assets/106149210/2d07202b-8527-4da4-a437-5237f6fd14e4)
